@@ -14,8 +14,22 @@ return new class extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->id();
+            
+            // $table->timestamps();
+            $table->engine = 'InnoDB';
+           
+            // $table->unique('productCode');
+            $table->increments('id');
+            $table->string('productCode')->unique();
+            $table->string('productName')->nullable();
+            $table->string('productDescription')->nullable();
+            $table->string('manufacturerId')->nullable();
+            $table->string('landedCost')->nullable();
+            $table->string('markUp')->nullable();
+            $table->string('discount')->nullable();
+            $table->string('retailCost')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
