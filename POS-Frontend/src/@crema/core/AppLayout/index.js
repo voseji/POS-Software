@@ -30,7 +30,7 @@ const AppLayout = () => {
         <AppLayout />
       ) : (
         <AuthWrapper>
-          <AppContentView />
+          {/* <AppContentView /> */}
         </AuthWrapper>
       )}
     </>

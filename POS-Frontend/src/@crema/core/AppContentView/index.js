@@ -29,6 +29,7 @@ const AppContentView = ({sxStyle}) => {
       >
         <AppSuspense>
           <AppErrorBoundary>
+            <></>
             {generateRoutes({
               isAuthenticated: isAuthenticated,
               userRole: user?.role,
