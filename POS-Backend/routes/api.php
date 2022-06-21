@@ -7,6 +7,7 @@ use App\Http\Controllers\StockController;
 use App\Http\Controllers\SalesController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ManufacturerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,3 +65,10 @@ Route::post('/customer', [CustomerController::class, 'create']);
 Route::get('/customer/{customerId}', [CustomerController::class, 'show']);
 Route::patch('/customer/{customerId}', [CustomerController::class, 'edit']);
 Route::delete('/customer/{customerId}', [CustomerController::class, 'destroy']);
+
+
+Route::get('/manufacturer', [ManufacturerController::class, 'index']);
+Route::post('/manufacturer', [ManufacturerController::class, 'create']);
+Route::get('/manufacturer/{manufacturerId}', [ManufacturerController::class, 'show']);
+Route::patch('/manufacturer/{manufacturerId}', [ManufacturerController::class, 'edit']);
+Route::delete('/manufacturer/{manufacturerId}', [ManufacturerController::class, 'destroy']);
